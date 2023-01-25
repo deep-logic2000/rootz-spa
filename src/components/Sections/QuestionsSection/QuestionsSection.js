@@ -1,4 +1,5 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import PropTypes from 'prop-types';
 
 import { ReactComponent as MinusIcon } from "../../../assets/images/icons/minus_icon.svg";
 import { ReactComponent as PlusIcon } from "../../../assets/images/icons/plus_icon.svg";
@@ -10,7 +11,7 @@ const QuestionsSection = ({ items }) => {
 
   useEffect(() => {
     setState(items);
-  }, []);
+  }, [items]);
 
   const onToggleChange = (id) => {
     if (id) {
@@ -61,3 +62,13 @@ const QuestionsSection = ({ items }) => {
 };
 
 export default QuestionsSection;
+
+
+QuestionsSection.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+    isOpen: PropTypes.bool.isRequired,
+  })).isRequired,
+};

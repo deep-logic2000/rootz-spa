@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useViewPort } from "../../../hooks/useViewPort";
 
 import teamMate_1 from "../../../assets/images/team/team_01.png";

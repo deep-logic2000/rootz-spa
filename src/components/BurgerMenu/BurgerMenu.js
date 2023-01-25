@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 import { ReactComponent as Logo } from "../../assets/images/logo/logo_main.svg";
 import { ReactComponent as CloseIcon } from "../../assets/images/icons/close_icon.svg";
@@ -39,3 +40,12 @@ const BurgerMenu = ({ items, handleClose }) => {
 };
 
 export default BurgerMenu;
+
+
+BurgerMenu.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    to: PropTypes.string.isRequired,
+  })).isRequired,
+  handleClose: PropTypes.func.isRequired,
+};

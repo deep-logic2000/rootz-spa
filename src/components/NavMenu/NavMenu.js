@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 import styles from "./NavMenu.module.scss";
 
@@ -25,3 +26,11 @@ const NavMenu = ({ items }) => {
 };
 
 export default NavMenu;
+
+
+NavMenu.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    to: PropTypes.string.isRequired,
+  })).isRequired,
+};
