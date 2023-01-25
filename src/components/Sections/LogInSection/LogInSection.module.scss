@@ -1,0 +1,203 @@
+@import "../../../assets/styles/_variables.scss";
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+
+.loginSectionWrapper {
+  display: flex;
+  background-color: #ffbd9e;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  gap: 104px;
+  border-radius: 30px;
+  padding: 104px;
+  box-sizing: border-box;
+  margin: 100px 0;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+  & > div {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @media (max-width: 768px) {
+      width: 95%;
+      max-width: 420px;
+    }
+  }
+  & .leftSide {
+    & h1 {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+    & p {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 32px;
+      opacity: 0.9;
+      color: $black-02;
+    }
+  }
+  & .loginFormWrapper {
+    background-color: $grey-light;
+    border-radius: 30px;
+    position: relative;
+    padding: 40px 55px;
+    max-width: 422px;
+    box-sizing: border-box;
+    & h1 {
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 56px;
+      color: $black-01;
+      margin-bottom: 24px;
+    }
+    & form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      & button,
+      input {
+        max-width: 312px;
+        width: 100%;
+        border: none;
+        height: 48px;
+        padding: 0;
+      }
+
+      & input {
+        font-weight: 400;
+        background: $white;
+        color: #807c7c;
+        margin-bottom: 16px;
+        padding-left: 24px;
+        border-radius: 40px;
+        font-size: 14px;
+        line-height: 24px;
+
+        &::placeholder {
+          color: $grey;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 24px;
+        }
+        &:focus::placeholder {
+          color: transparent;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      & button {
+        outline: none;
+        background: $red;
+        color: $white;
+        margin-top: 16px;
+        border-radius: 30px;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 140%;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &:hover {
+          background: $light-red;
+          transition: 0.2s;
+        }
+      }
+    }
+
+    & .leafRed {
+      position: absolute;
+      top: -20px;
+      right: -20px;
+    }
+
+    & .leafBlue {
+      position: absolute;
+      top: 60px;
+      right: -20px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .loginSectionWrapper {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .loginSectionWrapper {
+    padding: 75px;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
+
+  .loginSectionWrapper {
+    padding: 42px 18px 56px;
+    gap: 65px;
+
+    & h1 {
+      font-size: 28px;
+      line-height: 42px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .loginSectionWrapper {
+    padding: 42px 18px 56px;
+    gap: 55px;
+
+    & .leftSide {
+      & h1 {
+        font-size: 28px;
+        line-height: 150%;
+        margin-bottom: 20px;
+      }
+
+      & p {
+        font-size: 15px;
+        line-height: 175%;
+      }
+    }
+
+    & .loginFormWrapper {
+      padding: 40px 24px;
+
+      & h1 {
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      & .leafRed {
+        width: 42px;
+        top: -10px;
+        right: -7px;
+      }
+
+      & .leafBlue {
+        top: 40px;
+        right: -20px;
+      }
+    }
+  }
+}

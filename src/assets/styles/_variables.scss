@@ -1,0 +1,17 @@
+$fonts: "Poppins", sans-serif;
+
+$black: #000000;
+$black-01: #222433;
+$black-02: #1E1A20;
+$black-03: #333333;
+$white: #ffffff;
+$grey: #807C7C;
+$grey-light: #F7F3F4;
+$red: #f2726c;
+$light-red: #FFBD9E;
+$shadow-4: 0px 1px 4px rgba(0, 0, 0, 0.17);
+
+:export {
+  black: $black;
+  white: $white;
+}

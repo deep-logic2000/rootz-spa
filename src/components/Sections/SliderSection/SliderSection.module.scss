@@ -1,0 +1,97 @@
+@import "../../../assets/styles/_variables.scss";
+
+.sectionWrapper {
+  background: #ffbd9e;
+  height: 655px;
+}
+
+.container {
+  margin: 0 auto;
+  padding-top: 104px;
+}
+
+.arrowsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.arrowRight {
+  margin-right: 40px;
+}
+
+.arrowLeft {
+  margin-left: 40px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+
+  & span {
+    color: $grey;
+    opacity: 0.7;
+  }
+}
+
+.paginationSlideDevider {
+  color: $grey;
+  opacity: 0.7;
+  font-size: 40px;
+  margin: 0 5px;
+}
+
+.sliderImgWrapper {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 275px !important;
+
+  & img {
+    width: 100% !important;
+  }
+}
+
+.slider {
+  height: 275px;
+}
+
+@media (max-width: 1024px) {
+  .sectionWrapper {
+    height: 600px;
+  }
+
+  .container {
+    padding-top: 94px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionWrapper {
+    height: 555px;
+  }
+  .container {
+    padding-top: 84px;
+  }
+  .pagination {
+    font-size: 22px;
+  }
+
+  .paginationSlideDevider {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 450px) {
+  .sectionWrapper {
+    height: 491px;
+  }
+  .container {
+    padding-top: 72px;
+  }
+}
